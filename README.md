@@ -10,3 +10,6 @@ This is a work in progress.
 * `$ yarn build:dll`
 * `$ yarn start`
 * Go to http://localhost:8080
+
+### Credits
+This project is built upon [antonybudianto/angular-webpack-starter](https://github.com/antonybudianto/angular-webpack-starter) by Antony Budianto
