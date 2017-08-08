@@ -35,7 +35,6 @@ export class AuthenticationService extends DrupalService {
     }
 
     authStatus () {
-        // If user logs out of Drupal, we need to know in Angular
         const resource = 'user/login_status';
         return this.httpGet(resource)
             .map((response: Response) => {
@@ -52,7 +51,6 @@ export class AuthenticationService extends DrupalService {
     }
 
     private hasToken (): boolean {
-        return false;
-        // return !!localStorage.getItem('currentDrupalUser');
+        return !!localStorage.getItem('currentDrupalUser');
     }
 }
