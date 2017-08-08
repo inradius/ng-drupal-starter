@@ -1,0 +1,16 @@
+.env
+.DS_Store
+node_modules
+npm-debug.log
+.idea
+.awcache
+coverage
+dist
+dll-dist
+typings
+
+# TypeScript Compiled Files
+e2e/**/*.js
+src/**/*.jsv
+e2e/**/*.map
+src/**/*.map
