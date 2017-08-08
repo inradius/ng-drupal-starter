@@ -13,7 +13,6 @@
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <app-language></app-language>
             <ul class="nav navbar-nav navbar-right">
                 <li *ngFor="let item of mainMenu;" [class.dropdown]="item.hasChildren">
                     <a *ngIf="item.hasChildren"

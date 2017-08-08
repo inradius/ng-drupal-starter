@@ -5,12 +5,14 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgPipesModule } from 'ngx-pipes/esm';
 import {
     AlertModule,
-    BrowserDetectModule
+    BrowserDetectModule,
+    NavbarModule
 } from './index';
 import {
     AlertService,
     AuthenticationService,
-    DrupalService
+    DrupalService,
+    MenuService
 } from './service/index';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 
@@ -29,19 +31,22 @@ export function HttpLoaderFactory(http: Http) {
             }
         }),
         AlertModule,
-        BrowserDetectModule
+        BrowserDetectModule,
+        NavbarModule
     ],
     declarations: [],
     exports: [
         NgPipesModule,
         TranslateModule,
         AlertModule,
-        BrowserDetectModule
+        BrowserDetectModule,
+        NavbarModule
     ],
     providers: [
         AlertService,
         DrupalService,
-        AuthenticationService
+        AuthenticationService,
+        MenuService
     ],
 })
 export class CoreModule {
