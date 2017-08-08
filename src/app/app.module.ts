@@ -10,9 +10,7 @@ import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
+    declarations: [ AppComponent ],
     imports: [
         BrowserModule,
         CookieModule.forRoot(),
@@ -25,5 +23,4 @@ import { UserModule } from './user/user.module';
     ],
     bootstrap: [ AppComponent ]
 })
-export class AppModule {
-}
+export class AppModule {}

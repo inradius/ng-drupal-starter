@@ -3,12 +3,16 @@ import { Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgPipesModule } from 'ngx-pipes/esm';
-import { BrowserDetectModule } from './index';
-import { throwIfAlreadyLoaded } from './module-import-guard';
 import {
+    AlertModule,
+    BrowserDetectModule
+} from './index';
+import {
+    AlertService,
     AuthenticationService,
     DrupalService
 } from './service/index';
+import { throwIfAlreadyLoaded } from './module-import-guard';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, '/assets/i18n/', '-lang.json');
@@ -24,15 +28,18 @@ export function HttpLoaderFactory(http: Http) {
                 deps: [Http]
             }
         }),
+        AlertModule,
         BrowserDetectModule
     ],
     declarations: [],
     exports: [
         NgPipesModule,
         TranslateModule,
+        AlertModule,
         BrowserDetectModule
     ],
     providers: [
+        AlertService,
         DrupalService,
         AuthenticationService
     ],

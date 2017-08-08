@@ -2,8 +2,10 @@ import * as _ from 'lodash';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-
-import { AuthenticationService } from '../../core/service/index';
+import {
+    AlertService,
+    AuthenticationService
+} from '../../core/service/index';
 
 @Component({
     selector: 'app-login',
@@ -19,6 +21,7 @@ export class LoginComponent implements OnInit {
     isLoggedIn: Observable<boolean>;
 
     constructor(
+        private alertService: AlertService,
         private authService: AuthenticationService,
         private route: ActivatedRoute) {
         this.isLoggedIn = authService.isLoggedIn();
@@ -52,6 +55,7 @@ export class LoginComponent implements OnInit {
                     err = JSON.parse(err._body);
                     err = err.message;
                 }
+                this.alertService.error(err);
                 this.loading = false;
             });
     }

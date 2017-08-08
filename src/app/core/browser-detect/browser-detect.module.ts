@@ -16,5 +16,4 @@ import { BrowserDetectComponent } from './browser-detect.component';
         BrowserDetectComponent
     ]
 })
-export class BrowserDetectModule {
-}
+export class BrowserDetectModule {}

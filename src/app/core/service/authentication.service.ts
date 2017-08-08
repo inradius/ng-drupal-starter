@@ -52,6 +52,7 @@ export class AuthenticationService extends DrupalService {
     }
 
     private hasToken (): boolean {
-        return !!localStorage.getItem('currentDrupalUser');
+        return false;
+        // return !!localStorage.getItem('currentDrupalUser');
     }
 }
