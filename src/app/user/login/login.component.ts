@@ -32,10 +32,11 @@ export class LoginComponent implements OnInit {
     checkStatus () {
         this.authService.authStatus().subscribe(
             data => {
+                console.log(data);
                 // drupal user is currently logged in. What now?
             },
             err => {
-                // console.error(err);
+                console.error(err);
             }
         );
     }

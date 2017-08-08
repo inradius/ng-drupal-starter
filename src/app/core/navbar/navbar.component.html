@@ -55,7 +55,7 @@
                      </ul>
                 </li>
                 <li *ngIf="!(isLoggedIn | async)">
-                    <a [routerLink]="['/login']" routerLinkActive="active">Login</a>
+                    <a [routerLink]="['/user/login']" routerLinkActive="active">Login</a>
                 </li>
                 <li *ngIf="(isLoggedIn | async)" (click)="authLogout()" class="btn-logout">
                     <a>Logout</a>

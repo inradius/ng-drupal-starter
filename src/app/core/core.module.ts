@@ -6,6 +6,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgPipesModule } from 'ngx-pipes/esm';
 import { BrowserDetectModule } from './index';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+import {
+    AuthenticationService,
+    DrupalService
+} from './service/index';
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, '/assets/i18n/', '-lang.json');
@@ -30,7 +34,10 @@ export function HttpLoaderFactory(http: Http) {
         TranslateModule,
         BrowserDetectModule
     ],
-    providers: [],
+    providers: [
+        DrupalService,
+        AuthenticationService
+    ],
 })
 export class CoreModule {
     constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
