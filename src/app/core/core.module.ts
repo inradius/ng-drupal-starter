@@ -1,5 +1,4 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Http } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -17,7 +16,6 @@ export function HttpLoaderFactory(http: Http) {
 
 @NgModule({
     imports: [
-        CommonModule,
         NgPipesModule,
         TranslateModule.forRoot({
             loader: {
