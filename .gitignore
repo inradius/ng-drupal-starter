@@ -8,6 +8,7 @@ coverage
 dist
 dll-dist
 typings
+*.lock
 
 # TypeScript Compiled Files
 e2e/**/*.js

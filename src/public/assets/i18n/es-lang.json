@@ -1,0 +1,20 @@
+{
+    "BUTTON": {
+        "ACCEPT": "Aceptar",
+        "SUBMIT": "Enviar",
+        "CANCEL": "Cancelar"
+    },
+    "CUSTOMER": {
+        "CREATE_NEW_CUSTOMER_ACCOUNT": "Crear Nueva Cuenta",
+        "FORGOT_PASSWORD": "¿Has olvidado tu contraseña?",
+        "EMAIL": "Correo electrónico",
+        "PASSWORD": "Contraseña",
+        "CONFIRM_PASSWORD": "Confirmar contraseña"
+    },
+    "ERROR": {
+        "403": {
+            "NAME": "Acceso denegado",
+            "DESCRIPTION": "No tiene acceso al recurso solicitado."
+        }
+    }
+}

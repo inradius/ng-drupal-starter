@@ -1,0 +1,59 @@
+:root {
+  --mainColor: white;
+}
+
+body {
+    background-color: var(--mainColor);
+}
+
+.center-fix {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main-spinner {
+    font-size: 3em;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.no-border{
+    border: none !important;
+}
+
+.no-border-radius{
+    border-radius: 0 !important;
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+
+.margin-left-10{
+    margin-left: 10px;
+}
+
+.margin-right-10{
+    margin-right: 10px;
+}
+
+.display-inline-block{
+    display: inline-block;
+}
+
+.display-block{
+    display: block;
+}

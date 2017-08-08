@@ -1,0 +1,20 @@
+{
+    "BUTTON": {
+        "ACCEPT": "Accept",
+        "SUBMIT": "Submit",
+        "CANCEL": "Cancel"
+    },
+    "USER": {
+        "CREATE_NEW_CUSTOMER_ACCOUNT": "Create New Account",
+        "FORGOT_PASSWORD": "Forgot Your Password",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "CONFIRM_PASSWORD": "Confirm Password"
+    },
+    "ERROR": {
+        "403": {
+            "NAME": "Access Denied",
+            "DESCRIPTION": "You do not have access to the requested resource."
+        }
+    }
+}
