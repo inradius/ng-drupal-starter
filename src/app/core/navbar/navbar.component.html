@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']" >
+                <span><img width="25" height="25" src="../../../public/favicon.ico" alt="Brand">
+                    {{brand}}</span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <app-language></app-language>
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngFor="let item of mainMenu;" [class.dropdown]="item.hasChildren">
+                    <a *ngIf="item.hasChildren"
+                       [attr.href]="item.url"
+                       [attr.title]="item.description"
+                       [class.dropdown-toggle]="item.hasChildren"
+                       [attr.data-toggle]="item.hasChildren ? 'dropdown' : null"
+                       [attr.role]="item.hasChildren ? 'button' : null"
+                       [attr.aria-haspopup]="item.hasChildren ? 'true' : null"
+                       [attr.aria-expanded]="item.hasChildren ? 'false' : null">
+                        {{ item.title }}
+                        <span *ngIf="item.hasChildren" class="caret"></span>
+                    </a>
+                    <a *ngIf="!item.hasChildren && item.isExternal"
+                        [attr.href]="item.url"
+                        [attr.title]="item.description">
+                        {{ item.title }}
+                    </a>
+                    <a *ngIf="!item.hasChildren && !item.isExternal"
+                       [routerLink]="[item.url]"
+                       [routerLinkActive]="['active']"
+                       [attr.title]="item.description">
+                        {{ item.title }}
+                    </a>
+                    <ul *ngIf="item.children" class="dropdown-menu">
+                        <li *ngFor="let item2 of item.children;">
+                            <a  *ngIf="item2.isExternal"
+                                [attr.href]="item2.url"
+                                [attr.title]="item2.description">
+                                {{ item2.title }}
+                            </a>
+                            <a *ngIf="!item2.isExternal"
+                               [routerLink]="[item2.url]"
+                               [routerLinkActive]="['active']"
+                               [attr.title]="item2.description">
+                                {{ item2.title }}
+                            </a>
+                        </li>
+                     </ul>
+                </li>
+                <li *ngIf="!(isLoggedIn | async)">
+                    <a [routerLink]="['/login']" routerLinkActive="active">Login</a>
+                </li>
+                <li *ngIf="(isLoggedIn | async)" (click)="authLogout()" class="btn-logout">
+                    <a>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,3 @@
+nav.navbar { position: relative; }
+
+.navbar-nav > li.btn-logout > a { cursor: pointer; }
